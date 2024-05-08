@@ -1,18 +1,13 @@
+<script lang="ts">
+  const buildings = Array(4).fill(0);
+</script>
+
 <div class="container">
   <div class="track">
     <div class="slip-track">
-      <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
-      <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
-      <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
-      <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
-    </div>
-  </div>
-  <div class="track">
-    <div class="slip-track">
-      <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
-      <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
-      <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
-      <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
+      {#each buildings as _}
+        <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
+      {/each}
     </div>
   </div>
 </div>
@@ -20,7 +15,7 @@
 <style>
   .container {
     margin-top: auto;
-    transform: translateY(25%);
+    transform: translateY(33%);
   }
 
   .track {
@@ -41,11 +36,11 @@
     transform: translateY(-33%);
   }
 
-  img:nth-child(3) {
+  img:nth-child(3n) {
     transform: translateY(33%);
   }
 
-  img:nth-child(4) {
+  img:nth-child(4n) {
     transform: translateY(66%);
   }
 
