@@ -1,29 +1,8 @@
 <script lang="ts">
   import '@fontsource-variable/archivo/wdth.css';
   import '../app.css';
+  import Header from '$lib/Header.svelte';
 </script>
 
-<header>
-  <section class="gutter"></section>
-  <section class="m-24">
-    <h1>Bence Molnár</h1>
-    <h5>Web Developer</h5>
-  </section>
-</header>
+<Header />
 <slot></slot>
-
-<style>
-  header {
-    border-bottom: solid var(--border-width) var(--border-color);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-transform: uppercase;
-  }
-
-  .gutter {
-    height: 7rem;
-    width: min(20rem, 100vw);
-    background: #000;
-  }
-</style>
