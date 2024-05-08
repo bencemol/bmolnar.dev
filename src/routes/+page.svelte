@@ -1,9 +1,14 @@
+<script lang="ts">
+  import BauhausBucher12 from '$lib/BauhausBucher12.svelte';
+</script>
+
 <main>
   <nav>
     <ul>
-      <li>
+      <li class="work">
         <a href="/work">
           <h2 class="nav-item">Work</h2>
+          <BauhausBucher12 />
         </a>
       </li>
       <li>
@@ -42,7 +47,19 @@
     grid-column: 4;
   }
 
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
   h2 {
-    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .work:hover {
+    --slip-play-state: running;
   }
 </style>
