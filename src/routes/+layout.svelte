@@ -7,7 +7,7 @@
   <section class="gutter"></section>
   <section class="m-24">
     <h1>Bence Molnár</h1>
-    <p>Web Developer</p>
+    <h5>Web Developer</h5>
   </section>
 </header>
 <slot></slot>
