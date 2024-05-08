@@ -18,7 +18,9 @@
   .gutter {
     height: 7rem;
     width: min(20rem, 100vw);
-    background: #000;
+    border-right: solid var(--border-width) var(--border-color);
+    background: var(--hover-color, #000);
+    transition: background 900ms cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .job-title {

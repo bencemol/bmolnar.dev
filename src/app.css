@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 ul,
@@ -14,7 +15,8 @@ a {
   color: currentColor;
 }
 
-a:hover {
+a:hover,
+a:hover * {
   text-decoration: underline;
   text-decoration-thickness: 4px;
 }
@@ -24,7 +26,18 @@ html {
   --border-color: #000;
 }
 
+html:has(.hover-color-1:hover) {
+  --hover-color: #fe4038;
+}
+html:has(.hover-color-2:hover) {
+  --hover-color: #fcde03;
+}
+html:has(.hover-color-3:hover) {
+  --hover-color: #529fc2;
+}
+
 body {
+  min-height: 100vh;
 }
 
 h1,
@@ -39,4 +52,13 @@ h6 {
 
 .m-24 {
   margin: 24px;
+}
+
+@media only screen and (min-width: 189rem) {
+  body {
+    max-width: 189rem;
+    border-left: solid var(--border-width) var(--border-color);
+    border-right: solid var(--border-width) var(--border-color);
+    margin: 0 auto;
+  }
 }

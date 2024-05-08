@@ -5,19 +5,19 @@
 <main>
   <nav>
     <ul>
-      <li class="work">
+      <li class="work hover-color-1">
         <a href="/work">
           <h2 class="nav-item">Work</h2>
           <BauhausBucher12 />
         </a>
       </li>
-      <li>
+      <li class="hover-color-2">
         <a href="/inspiration">
           <h2 class="nav-item">Inspiration</h2>
         </a>
       </li>
       <li></li>
-      <li>
+      <li class="hover-color-3">
         <a href="/contact">
           <h2 class="nav-item">Contact</h2>
         </a>
