@@ -16,7 +16,7 @@ a {
 }
 
 a:hover,
-a:hover * {
+a:hover > * {
   text-decoration: underline;
   text-decoration-thickness: 4px;
 }
@@ -27,7 +27,7 @@ html {
 }
 
 html:has(.hover-color-1:hover) {
-  --hover-color: #fe4038;
+  --hover-color: #f2846b;
 }
 html:has(.hover-color-2:hover) {
   --hover-color: #fcde03;

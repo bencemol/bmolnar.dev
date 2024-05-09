@@ -1,5 +1,6 @@
 <script lang="ts">
-  import BauhausBucher12 from '$lib/BauhausBucher12.svelte';
+  import BuildingConveyor from '$lib/BuildingConveyor.svelte';
+  import NestedCubes from '$lib/NestedCubes.svelte';
 </script>
 
 <main>
@@ -8,12 +9,13 @@
       <li class="work hover-color-1">
         <a href="/work">
           <h2 class="nav-item">Work</h2>
-          <BauhausBucher12 />
+          <BuildingConveyor />
         </a>
       </li>
-      <li class="hover-color-2">
+      <li class="inspiration hover-color-2">
         <a href="/inspiration">
           <h2 class="nav-item">Inspiration</h2>
+          <NestedCubes />
         </a>
       </li>
       <li></li>
@@ -61,5 +63,11 @@
 
   .work:hover {
     --slip-play-state: running;
+  }
+
+  .inspiration:not(:hover) {
+    --rotation: 0;
+    --depth: 0;
+    --scale: 0;
   }
 </style>
