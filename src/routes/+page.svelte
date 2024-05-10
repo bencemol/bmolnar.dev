@@ -34,7 +34,6 @@
     flex-wrap: wrap;
     text-transform: uppercase;
     text-align: right;
-    border-top: solid var(--border-width) var(--border-color);
     border-bottom: solid var(--border-width) var(--border-color);
   }
 

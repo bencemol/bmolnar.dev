@@ -11,10 +11,14 @@
     display: flex;
     align-items: stretch;
     text-transform: uppercase;
+    border-bottom: solid var(--border-width) var(--border-color);
   }
 
   .title {
     flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .gutter {
