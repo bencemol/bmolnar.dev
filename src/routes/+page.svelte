@@ -18,7 +18,7 @@
           <NestedCubes />
         </a>
       </li>
-      <li></li>
+      <li class="spacer"></li>
       <li class="hover-color-3">
         <a href="/contact">
           <h2 class="nav-item">Contact</h2>
@@ -30,15 +30,18 @@
 
 <style>
   nav ul {
-    display: grid;
-    grid-template-columns: 20rem 20rem auto 20rem;
-    border-bottom: solid var(--border-width) var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
     text-transform: uppercase;
     text-align: right;
+    border-top: solid var(--border-width) var(--border-color);
+    border-bottom: solid var(--border-width) var(--border-color);
   }
 
   li {
+    width: 20rem;
     height: 23rem;
+    flex-grow: 0;
   }
 
   li:not(:last-child) {
@@ -61,6 +64,11 @@
     padding: 1rem;
   }
 
+  .spacer {
+    width: 0;
+    flex-grow: 1;
+  }
+
   .work:hover {
     --slip-play-state: running;
   }
@@ -69,5 +77,25 @@
     --rotation: 0;
     --depth: 0;
     --scale: 0;
+  }
+
+  @media only screen and (max-width: 62rem) {
+    nav ul {
+      display: block;
+      border-bottom: none;
+    }
+
+    li {
+      width: 100%;
+    }
+
+    li:not(:last-child) {
+      border-right: none;
+      border-bottom: solid var(--border-width) var(--border-color);
+    }
+
+    .spacer {
+      display: none;
+    }
   }
 </style>
