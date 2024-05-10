@@ -24,16 +24,19 @@ a:hover > * {
 html {
   --border-width: 4px;
   --border-color: #000;
+  --status-light-1: #f2846b;
+  --status-light-2: #fcde03;
+  --status-light-3: #529fc2;
 }
 
-html:has(.hover-color-1:hover) {
-  --hover-color: #f2846b;
+html:has(.status-light-1:hover) {
+  --status-light: var(--status-light-1);
 }
-html:has(.hover-color-2:hover) {
-  --hover-color: #fcde03;
+html:has(.status-light-2:hover) {
+  --status-light: var(--status-light-2);
 }
-html:has(.hover-color-3:hover) {
-  --hover-color: #529fc2;
+html:has(.status-light-3:hover) {
+  --status-light: var(--status-light-3);
 }
 
 body {

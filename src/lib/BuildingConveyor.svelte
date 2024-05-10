@@ -6,7 +6,7 @@
   <div class="track">
     <div class="slip-track">
       {#each buildings as _}
-        <img src="./slice1.svg" alt="Bauhaus Buildings Dessau" />
+        <img src="./bauhausbucher_12.svg" alt="Bauhaus Buildings Dessau" />
       {/each}
     </div>
   </div>
@@ -50,6 +50,12 @@
     }
     100% {
       transform: translate(-66%, -33%);
+    }
+  }
+
+  @media only screen and (max-width: 80rem) {
+    .container {
+      transform: translateY(21%);
     }
   }
 </style>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import BuildingConveyor from '$lib/BuildingConveyor.svelte';
   import NestedCubes from '$lib/NestedCubes.svelte';
+  import PointAndLine from '$lib/PointAndLine.svelte';
 </script>
 
 <svelte:head>
@@ -10,24 +11,32 @@
 <main>
   <nav>
     <ul>
-      <li class="work hover-color-1">
+      <li class="work status-light-1">
         <a href="/work">
           <h2 class="nav-item">Work</h2>
           <BuildingConveyor />
         </a>
       </li>
-      <li class="inspiration hover-color-2">
+      <li class="inspiration status-light-2">
         <a href="/inspiration">
           <h2 class="nav-item">Inspiration</h2>
           <NestedCubes />
         </a>
       </li>
-      <li class="spacer"></li>
-      <li class="hover-color-3">
+      <li class="spacer">
+        <img class="monument" src="./monument.jpeg" alt="Monument" />
+      </li>
+      <li class="contact status-light-3">
         <a href="/contact">
           <h2 class="nav-item">Contact</h2>
+          <PointAndLine />
         </a>
       </li>
+    </ul>
+    <ul>
+      <li class="double-width"></li>
+      <li class="spacer"></li>
+      <li></li>
     </ul>
   </nav>
 </main>
@@ -70,6 +79,10 @@
   .spacer {
     width: 0;
     flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
   }
 
   .work:hover {
@@ -82,7 +95,15 @@
     --scale: 0;
   }
 
-  @media only screen and (max-width: 62rem) {
+  .monument {
+    height: 18rem;
+  }
+
+  .double-width {
+    width: 40rem;
+  }
+
+  @media only screen and (max-width: 80rem) {
     nav ul {
       display: block;
       border-bottom: none;
@@ -98,7 +119,7 @@
     }
 
     .spacer {
-      display: none;
+      width: initial;
     }
   }
 </style>
