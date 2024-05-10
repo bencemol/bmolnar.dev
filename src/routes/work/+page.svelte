@@ -1,3 +1,7 @@
+<script>
+  import NavBar from '$lib/NavBar.svelte';
+</script>
+
 <section>
   <style>
     html {
@@ -5,3 +9,5 @@
     }
   </style>
 </section>
+
+<NavBar />
