@@ -38,4 +38,12 @@
     font-size: 1.45rem;
     font-weight: 300;
   }
+
+  @media only screen and (max-width: 62rem) {
+    .gutter {
+      aspect-ratio: 1 / 1;
+      flex-grow: 0;
+      flex-basis: 7rem;
+    }
+  }
 </style>

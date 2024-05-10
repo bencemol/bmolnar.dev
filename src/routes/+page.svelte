@@ -3,6 +3,10 @@
   import NestedCubes from '$lib/NestedCubes.svelte';
 </script>
 
+<svelte:head>
+  <meta name="description" content="Bence Molnár - design engineer and web developer." />
+</svelte:head>
+
 <main>
   <nav>
     <ul>
