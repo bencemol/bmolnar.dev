@@ -6,7 +6,7 @@
   export { href, active, className as class };
 </script>
 
-<li class:active class={className}>
+<li class:active class={`nav-item ${className}`}>
   <a {href}>
     <slot></slot>
   </a>
@@ -14,7 +14,6 @@
 
 <style>
   li {
-    width: 20rem;
     flex-grow: 0;
   }
 
@@ -35,5 +34,26 @@
   :global(.active a *) {
     text-decoration: underline;
     text-decoration-thickness: 4px;
+  }
+
+  @media only screen and (max-width: 80rem) {
+    li {
+      flex-grow: 1;
+      width: auto;
+    }
+
+    a {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 38rem) {
+    li:last-child {
+      border-right: none;
+    }
+
+    :global(.nav-item a *) {
+      font-size: 3.5vw;
+    }
   }
 </style>
