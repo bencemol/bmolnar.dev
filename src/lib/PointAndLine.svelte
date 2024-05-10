@@ -1,7 +1,59 @@
-<img src="./bauhausbucher_9.svg" alt="Point and Line to Plane" />
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xml:space="preserve"
+  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
+  viewBox="0 0 405 558"
+  ><circle cx="710.02" cy="427.96" r="70.45" transform="matrix(.753 0 0 .753 -334 -137.7)" />
+  <g class="point-and-line-curve">
+    <path
+      d="M144.33 266.42c15.72 12.9 33.74 20.25 54.3 24.45 24.56 5 50.84 2.76 75.52-8.02 52.16-22.78 81.42-76.81 74.88-130.53 10.2 71.4-37.56 138.99-109.14 152.57A135.46 135.46 0 0 1 134.3 281l10.02-14.58Z"
+    />
+    <path
+      d="M1016.79 124.32a167.27 167.27 0 0 1 63.9 93.7m0 0c.54 1.35-.34-1.47 0 0 3.56 15.15 6.04 34.54 5.06 49.31a166.85 166.85 0 0 0-5.06-49.32ZM812.32 358.23c16.02 19.18 36.11 32.2 60 41.98a154.23 154.23 0 0 0 93.05 7.63c68.22-15.56 115.96-74.12 120.38-140.5-4.04 88.58-77.24 159.27-166.83 159.27a166.56 166.56 0 0 1-122.05-53.07"
+      style="fill:none;stroke:#000;stroke-width:4.92px"
+      transform="matrix(.799 -.152 .152 .799 -559.07 103.38)"
+    />
+    <path
+      d="M662.33 364.42 652.31 379"
+      style="fill:none;stroke:#000;stroke-width:4px"
+      transform="translate(-518 -98)"
+    />
+  </g>
+  <path
+    d="M646.77 484.99h198.66v28H646.77z"
+    style="stroke:#000;stroke-width:4.31px"
+    transform="matrix(1.057 0 0 .779 -588.08 -27.35)"
+  />
+  <path
+    d="M673.95 509.25h116.29v116.29H673.95z"
+    style="fill:none;stroke:#000;stroke-width:5.41px"
+    transform="matrix(.74 0 0 .74 -340.8 56.5)"
+  />
+  <path
+    d="M673.95 509.25h116.29v116.29H673.95z"
+    style="fill:none;stroke:#000;stroke-width:8.95px"
+    transform="matrix(.447 0 0 .447 -126.76 222.4)"
+  />
+  <path
+    d="M692.61 548.11v-17M744.61 548.11v-17M744.61 548.11h17M744.61 600.11h17M744.61 600.11v17M692.61 600.11v17M692.61 600.11h-17M692.61 548.11h-17"
+    style="fill:none;stroke:#000;stroke-width:4px"
+    transform="translate(-518 -98)"
+  />
+</svg>
 
 <style>
-  img {
+  svg {
     height: 18rem;
+  }
+
+  .point-and-line-curve {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotateZ(0deg);
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 600ms;
+  }
+
+  :global(a:hover .point-and-line-curve) {
+    transform: rotateZ(-180deg);
   }
 </style>

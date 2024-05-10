@@ -37,6 +37,10 @@
     transition: background 900ms cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
+  .gutter:hover {
+    --status-light: #000;
+  }
+
   .gutter a {
     width: 100%;
     height: 100%;

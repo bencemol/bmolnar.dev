@@ -36,7 +36,6 @@
     <ul>
       <li class="double-width"></li>
       <li class="spacer"></li>
-      <li></li>
     </ul>
   </nav>
 </main>
@@ -58,10 +57,6 @@
 
   li:not(:last-child) {
     border-right: solid var(--border-width) var(--border-color);
-  }
-
-  li:last-child {
-    grid-column: 4;
   }
 
   a {
@@ -109,13 +104,19 @@
       border-bottom: none;
     }
 
-    li {
+    li,
+    li.double-width {
       width: 100%;
     }
 
-    li:not(:last-child) {
+    li:not(:last-child),
+    li:last-child {
       border-right: none;
       border-bottom: solid var(--border-width) var(--border-color);
+    }
+
+    ul:last-child li:last-child {
+      border-bottom: none;
     }
 
     .spacer {

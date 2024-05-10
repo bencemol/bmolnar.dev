@@ -1,17 +1,17 @@
 <nav>
   <ul>
-    <li>
+    <li class="status-light-1">
       <a href="/work">
         <h2>Work</h2>
       </a>
     </li>
-    <li>
+    <li class="status-light-2">
       <a href="/inspiration">
         <h2>Inspiration</h2>
       </a>
     </li>
     <li class="spacer"></li>
-    <li>
+    <li class="status-light-3">
       <a href="/contact">
         <h2>Contact</h2>
       </a>
@@ -36,10 +36,6 @@
 
   li:not(:last-child) {
     border-right: solid var(--border-width) var(--border-color);
-  }
-
-  li:last-child {
-    grid-column: 4;
   }
 
   h2 {

@@ -1,8 +1,8 @@
 <script lang="ts">
-  import '@fontsource-variable/archivo/wdth.css';
-  import archivoWoff from '@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2?url';
-  import '../app.css';
   import Header from '$lib/Header.svelte';
+  import archivoWoff from '@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2?url';
+  import '@fontsource-variable/archivo/wdth.css';
+  import '../app.css';
 </script>
 
 <svelte:head>
