@@ -6,6 +6,7 @@
 </script>
 
 <svelte:head>
+  <title>bmolnar.dev</title>
   <link rel="preload" as="font" type="font/woff2" href={archivoWoff} crossorigin="anonymous" />
 </svelte:head>
 
