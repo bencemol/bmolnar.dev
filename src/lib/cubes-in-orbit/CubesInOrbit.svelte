@@ -28,16 +28,21 @@
   section {
     isolation: isolate;
     position: relative;
-    margin: 20rem;
-    --duration: 12s;
+    margin: 20em;
+    --duration: 16s;
+    --orbit-height: 6.7em;
+    --orbit-width: 6.7em;
+    --orbit-depth: 4.5em;
+    --gap: 1em;
+    --cos45: 0.7;
   }
 
   .cube-0 {
-    --size: 10rem;
+    --size: 10em;
     position: relative;
     width: var(--size);
     height: var(--size);
-    z-index: 5;
+    z-index: 3;
   }
 
   .cube-1,
@@ -45,87 +50,73 @@
   .cube-3,
   .cube-4 {
     width: 70%;
+    display: flex;
     position: absolute;
     bottom: 0;
     left: 0;
     animation:
-      orbit var(--duration) ease-in-out infinite,
+      orbit var(--duration) cubic-bezier(0.86, 0.1, 0.07, 1) infinite,
       orbit-z var(--duration) step-end infinite;
   }
 
   .cube-1 {
-    --bottom-front: -3.1rem, 7.4rem;
-    --top-front: -3.1rem, -5.3rem;
-    --top-back: 4.2rem, -10.2rem;
-    --bottom-back: 4.2rem, 1.8rem;
-    --z-front: 7;
-    --z-top-front: 7;
-    --z-back: 2;
+    --height: 6.9em;
+    --width: 4.1em;
     animation-delay: calc(-0.25 * var(--duration));
   }
 
   .cube-2 {
-    --bottom-front: -3rem, 7.2rem;
-    --top-front: -3rem, -5.3rem;
-    --top-back: 4.2rem, -10.2rem;
-    --bottom-back: 4.2rem, 2rem;
-    --z-front: 8;
-    --z-top-front: 8;
-    --z-back: 1;
+    --height: 5.9em;
+    --width: 4.6em;
   }
 
   .cube-3 {
-    --bottom-front: -3rem, 10.5rem;
-    --top-front: -3rem, -5.3rem;
-    --top-back: 4.2rem, -10.2rem;
-    --bottom-back: 4.2rem, 5.3rem;
-    --z-front: 6;
-    --z-top-front: 6;
-    --z-back: 3;
+    --height: 9.7em;
+    --width: 4.6em;
     animation-delay: calc(-0.5 * var(--duration));
   }
 
   .cube-4 {
-    --bottom-front: -3.1rem, 7.4rem;
-    --top-front: -3.1rem, -5.3rem;
-    --top-back: 4.2rem, -10.2rem;
-    --bottom-back: 4.2rem, 1.8rem;
-    --z-front: 8;
-    --z-top-front: 5;
-    --z-back: 4;
+    --height: 7em;
+    --width: 4.6em;
     animation-delay: calc(-0.75 * var(--duration));
   }
 
   @keyframes orbit {
-    0% {
-      transform: translate(var(--bottom-front));
+    0%,
+    100% {
+      transform: translate(calc(-0.4 * var(--width)), calc(var(--height) + var(--gap)));
     }
     25% {
-      transform: translate(var(--top-front));
+      transform: translate(calc(-0.4 * var(--width)), calc(-1 * var(--orbit-height) - var(--gap)));
     }
     50% {
-      transform: translate(var(--top-back));
+      transform: translate(
+        calc(var(--orbit-depth) * var(--cos45) + var(--gap)),
+        calc(-1 * var(--orbit-height) - var(--orbit-depth) * var(--cos45) - var(--gap))
+      );
     }
     75% {
-      transform: translate(var(--bottom-back));
-    }
-    100% {
-      transform: translate(var(--bottom-front));
+      transform: translate(
+        calc(var(--orbit-depth) * var(--cos45) + var(--gap)),
+        calc(-1 * var(--orbit-depth) * var(--cos45) + var(--height))
+      );
     }
   }
 
   @keyframes orbit-z {
-    0% {
-      z-index: var(--z-front);
+    0%,
+    100% {
+      z-index: 5;
     }
     25% {
-      z-index: var(--z-top-front);
+      z-index: 4;
     }
     50% {
-      z-index: var(--z-back);
+      z-index: 1;
     }
-    100% {
-      z-index: var(--z-back);
+    75% {
+      z-index: 2;
     }
   }
 </style>

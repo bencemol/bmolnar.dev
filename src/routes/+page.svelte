@@ -2,6 +2,7 @@
   import BuildingConveyor from '$lib/BuildingConveyor.svelte';
   import NestedCubes from '$lib/NestedCubes.svelte';
   import PointAndLine from '$lib/PointAndLine.svelte';
+  import CubesInOrbit from '$lib/cubes-in-orbit/CubesInOrbit.svelte';
 </script>
 
 <svelte:head>
@@ -24,7 +25,7 @@
         </a>
       </li>
       <li class="spacer">
-        <img class="monument" src="./monument.jpeg" alt="Monument" />
+        <CubesInOrbit />
       </li>
       <li class="contact status-light-3">
         <a href="/contact">
@@ -34,7 +35,9 @@
       </li>
     </ul>
     <ul>
-      <li class="double-width"></li>
+      <li class="double-width">
+        <img class="monument" src="./monument.jpeg" alt="Monument" />
+      </li>
       <li class="spacer"></li>
     </ul>
   </nav>
@@ -78,6 +81,7 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    font-size: 0.6rem;
   }
 
   .work:hover {
@@ -96,6 +100,10 @@
 
   .double-width {
     width: 40rem;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
   }
 
   @media only screen and (max-width: 80rem) {
