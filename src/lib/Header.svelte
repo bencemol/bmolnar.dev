@@ -4,7 +4,7 @@
   </section>
   <section class="title">
     <h1>Bence Molnár</h1>
-    <h2 class="job-title">Web Developer</h2>
+    <h2 class="job-title">web developer</h2>
   </section>
 </header>
 
@@ -12,7 +12,6 @@
   header {
     display: flex;
     align-items: stretch;
-    text-transform: uppercase;
     border-bottom: solid var(--border-width) var(--border-color);
   }
 
@@ -48,7 +47,7 @@
   }
 
   .job-title {
-    font-size: 1.45rem;
+    font-size: 1.55rem;
     font-weight: 300;
   }
 

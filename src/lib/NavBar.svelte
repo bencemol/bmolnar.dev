@@ -23,7 +23,7 @@
 <style>
   ul {
     display: flex;
-    text-transform: uppercase;
+    text-transform: lowercase;
     text-align: right;
     border-bottom: solid var(--border-width) var(--border-color);
   }

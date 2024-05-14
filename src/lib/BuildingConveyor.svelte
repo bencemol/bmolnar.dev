@@ -19,12 +19,13 @@
   }
 
   .track {
-    animation: slide 10000ms linear reverse infinite;
+    --duration: 10s;
+    animation: slide var(--duration) linear reverse infinite;
   }
 
   .slip-track {
     display: flex;
-    animation: slide 5000ms linear reverse infinite;
+    animation: slide calc(var(--duration) * 0.8) linear reverse infinite;
     animation-play-state: var(--slip-play-state, paused);
   }
 
@@ -55,7 +56,11 @@
 
   @media only screen and (max-width: 80rem) {
     .container {
-      transform: translateY(21%);
+      transform: scale(75%);
+    }
+
+    .track {
+      --duration: 15s;
     }
   }
 </style>

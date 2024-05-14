@@ -47,7 +47,7 @@
   nav ul {
     display: flex;
     flex-wrap: wrap;
-    text-transform: uppercase;
+    text-transform: lowercase;
     text-align: right;
     border-bottom: solid var(--border-width) var(--border-color);
   }
