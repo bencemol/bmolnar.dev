@@ -10,7 +10,7 @@
 <style>
   .container {
     margin: auto;
-    --unit: 0.3rem;
+    --unit: 0.3em;
     --animation-timing: cubic-bezier(0.075, 0.82, 0.165, 1) 600ms;
     --default-rotation: -8deg;
     width: calc(50 * var(--unit));

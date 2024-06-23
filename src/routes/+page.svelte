@@ -74,6 +74,10 @@
     font-size: max(0.7vh, 10px);
   }
 
+  .contact {
+    font-size: max(0.9vh, 13px);
+  }
+
   .contact:not(:hover) {
     --rotation: 0;
     --depth: 0;

@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <title>Bence Molnár - Web Dev</title>
+  <title>Bence Molnár</title>
   <link rel="preload" as="font" type="font/woff2" href={archivoWoff} crossorigin="anonymous" />
 </svelte:head>
 
