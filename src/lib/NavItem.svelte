@@ -14,7 +14,11 @@
 
 <style>
   li {
-    flex-grow: 0;
+    flex-grow: 1;
+  }
+
+  li:not(:last-child) {
+    border-right: solid var(--border-width) var(--border-color);
   }
 
   a {
@@ -33,7 +37,7 @@
 
   :global(.active a *) {
     text-decoration: underline;
-    text-decoration-thickness: 4px;
+    text-decoration-thickness: 6px;
   }
 
   @media only screen and (max-width: 80rem) {
@@ -48,10 +52,6 @@
   }
 
   @media only screen and (max-width: 38rem) {
-    li:last-child {
-      border-right: none;
-    }
-
     :global(.nav-item a *) {
       font-size: 3.5vw;
     }

@@ -1,7 +1,4 @@
 <header>
-  <section class="gutter">
-    <a href="/">Home</a>
-  </section>
   <section class="title">
     <h1>Bence Molnár</h1>
     <h2 class="job-title">web developer</h2>
@@ -12,7 +9,9 @@
   header {
     display: flex;
     align-items: stretch;
-    border-bottom: solid var(--border-width) var(--border-color);
+    color: #fff;
+    margin-bottom: var(--border-width);
+    transition: color 1900ms cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .title {
@@ -20,30 +19,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 24px;
-  }
-
-  .gutter {
-    width: 20rem;
-    flex-shrink: 0;
-    flex-grow: 1;
-    flex-basis: 0px;
-    min-width: 0px;
-    max-width: 20rem;
-    color: transparent;
-    border-right: solid var(--border-width) var(--border-color);
-    background: var(--status-light, #000);
-    transition: background 900ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-
-  .gutter:hover {
-    --status-light: #000;
-  }
-
-  .gutter a {
-    width: 100%;
-    height: 100%;
-    display: block;
+    margin: 36px;
+    margin-bottom: 18px;
   }
 
   .job-title {
@@ -51,18 +28,15 @@
     font-weight: 300;
   }
 
-  @media only screen and (max-width: 80rem) {
-    .gutter {
-      aspect-ratio: 1 / 1;
-      flex-grow: 0;
-      flex-basis: 6.5rem;
-    }
+  :global(html:has(.status-light-3:hover) header),
+  :global(html:has(.status-light-1:hover) header) {
+    color: #000;
   }
 
   @media only screen and (max-width: 31rem) {
     .title {
-      margin: 18px;
-      margin-left: auto;
+      margin: var(--border-width);
+      margin-bottom: 0px;
     }
   }
 </style>

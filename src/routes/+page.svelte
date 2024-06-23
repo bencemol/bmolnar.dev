@@ -21,114 +21,66 @@
       <li class="inspiration status-light-2">
         <a href="/inspiration">
           <h2 class="nav-item">Inspiration</h2>
-          <NestedCubes />
+          <CubesInOrbit />
         </a>
-      </li>
-      <li class="spacer">
-        <CubesInOrbit />
       </li>
       <li class="contact status-light-3">
         <a href="/contact">
           <h2 class="nav-item">Contact</h2>
-          <PointAndLine />
+          <NestedCubes />
         </a>
       </li>
-    </ul>
-    <ul>
-      <li class="double-width">
-        <img class="monument" src="./monument.jpeg" alt="Monument" />
-      </li>
-      <li class="spacer"></li>
     </ul>
   </nav>
 </main>
 
 <style>
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
+  ul {
+    height: calc(100vh - 10rem);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(1rem, 1fr));
     text-transform: lowercase;
     text-align: right;
-    border-bottom: solid var(--border-width) var(--border-color);
+    row-gap: var(--border-width);
+    margin: 0 var(--border-width) var(--border-width);
   }
 
   li {
-    width: 20rem;
-    height: 23rem;
-    flex-grow: 0;
-  }
-
-  li:not(:last-child) {
-    border-right: solid var(--border-width) var(--border-color);
+    background: #fff;
+    overflow: hidden;
+    border-radius: var(--border-width);
+    display: flex;
+    flex-direction: column;
   }
 
   a {
-    width: 100%;
-    height: 100%;
+    flex-grow: 1;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
   }
 
   h2 {
-    padding: 1rem;
-  }
-
-  .spacer {
-    width: 0;
-    flex-grow: 1;
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.6rem;
+    padding: 1.5rem;
   }
 
   .work:hover {
     --slip-play-state: running;
   }
 
-  .inspiration:not(:hover) {
+  .contact:not(:hover) {
     --rotation: 0;
     --depth: 0;
     --scale: 0;
   }
 
-  .monument {
-    height: 18rem;
-  }
-
-  .double-width {
-    width: 40rem;
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media only screen and (max-width: 80rem) {
-    nav ul {
-      display: block;
-      border-bottom: none;
+  @media screen and (max-height: 82rem) {
+    ul {
+      height: 100%;
     }
 
-    li,
-    li.double-width {
-      width: 100%;
-    }
-
-    li:not(:last-child),
-    li:last-child {
-      border-right: none;
-      border-bottom: solid var(--border-width) var(--border-color);
-    }
-
-    ul:last-child li:last-child {
-      border-bottom: none;
-    }
-
-    .spacer {
-      width: initial;
+    li {
+      height: 23rem;
     }
   }
 </style>
