@@ -23,32 +23,16 @@ a:hover > * {
 
 html {
   --border-width: 24px;
-  --border-color: #000;
-  --status-light-1: #f2846b;
-  --status-light-2: #7c7c7c;
-  --status-light-3: #ffde21;
-  --status-light: #000;
-
   display: grid;
   place-items: center;
-}
-
-html:has(.status-light-1:hover) {
-  --status-light: var(--status-light-1);
-}
-html:has(.status-light-2:hover) {
-  --status-light: var(--status-light-2);
-}
-html:has(.status-light-3:hover) {
-  --status-light: var(--status-light-3);
 }
 
 body {
   width: 100vw;
   min-height: 100vh;
   max-width: 80rem;
-  background: var(--status-light);
-  transition: background 1900ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  background: #000;
+  color: #fff;
 }
 
 h1,
@@ -59,10 +43,6 @@ h5,
 h6 {
   font-family: 'Archivo Variable', sans-serif;
   font-variation-settings: 'wdth' 125;
-}
-
-.m-24 {
-  margin: 24px;
 }
 
 @media only screen and (max-width: 31rem) {

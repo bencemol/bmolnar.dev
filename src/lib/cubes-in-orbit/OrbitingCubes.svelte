@@ -26,22 +26,23 @@
 
 <style>
   section {
+    margin: auto;
+    aspect-ratio: 1 / 1;
     isolation: isolate;
     position: relative;
-    margin: 20em;
     --duration: 16s;
     --orbit-height: 6.7em;
     --orbit-width: 6.7em;
     --orbit-depth: 4.5em;
     --gap: 1em;
     --cos45: 0.7;
+    --size: 5em;
   }
 
   .cube-0 {
-    --size: 10em;
     position: relative;
-    width: var(--size);
-    height: var(--size);
+    width: 10em;
+    height: 10em;
     z-index: 3;
   }
 

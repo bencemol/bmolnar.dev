@@ -1,8 +1,7 @@
 <script lang="ts">
   import BuildingConveyor from '$lib/BuildingConveyor.svelte';
   import NestedCubes from '$lib/NestedCubes.svelte';
-  import PointAndLine from '$lib/PointAndLine.svelte';
-  import CubesInOrbit from '$lib/cubes-in-orbit/CubesInOrbit.svelte';
+  import OrbitingCubes from '$lib/cubes-in-orbit/OrbitingCubes.svelte';
 </script>
 
 <svelte:head>
@@ -21,7 +20,7 @@
       <li class="inspiration status-light-2">
         <a href="/inspiration">
           <h2 class="nav-item">Inspiration</h2>
-          <CubesInOrbit />
+          <OrbitingCubes />
         </a>
       </li>
       <li class="contact status-light-3">
@@ -47,6 +46,7 @@
 
   li {
     background: #fff;
+    color: #000;
     overflow: hidden;
     border-radius: var(--border-width);
     display: flex;
@@ -55,17 +55,23 @@
 
   a {
     flex-grow: 1;
-    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
   }
 
   h2 {
+    font-size: 1.8rem;
+    align-self: flex-end;
     padding: 1.5rem;
   }
 
   .work:hover {
     --slip-play-state: running;
+  }
+
+  .inspiration a {
+    align-items: center;
+    font-size: max(0.7vh, 10px);
   }
 
   .contact:not(:hover) {

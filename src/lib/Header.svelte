@@ -9,9 +9,7 @@
   header {
     display: flex;
     align-items: stretch;
-    color: #fff;
     margin-bottom: var(--border-width);
-    transition: color 1900ms cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .title {
@@ -26,11 +24,6 @@
   .job-title {
     font-size: 1.55rem;
     font-weight: 300;
-  }
-
-  :global(html:has(.status-light-3:hover) header),
-  :global(html:has(.status-light-1:hover) header) {
-    color: #000;
   }
 
   @media only screen and (max-width: 31rem) {
