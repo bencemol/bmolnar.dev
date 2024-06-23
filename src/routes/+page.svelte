@@ -71,11 +71,11 @@
 
   .inspiration a {
     align-items: center;
-    font-size: max(0.7vh, 10px);
+    font-size: max(0.7vh, 8px);
   }
 
   .contact {
-    font-size: max(0.9vh, 13px);
+    font-size: max(0.9vh, 11px);
   }
 
   .contact:not(:hover) {

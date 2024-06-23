@@ -23,6 +23,7 @@ a:hover > * {
 
 html {
   --border-width: 24px;
+  --easing: cubic-bezier(0.65, 0.05, 0.36, 1);
   display: grid;
   place-items: center;
 }
@@ -33,6 +34,7 @@ body {
   max-width: 80rem;
   background: #000;
   color: #fff;
+  font-family: 'Archivo Variable', sans-serif;
 }
 
 h1,
@@ -41,8 +43,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Archivo Variable', sans-serif;
   font-variation-settings: 'wdth' 125;
+}
+
+main {
+  transition:
+    filter 300ms var(--easing),
+    opacity 300ms var(--easing),
+    transform 300ms var(--easing);
+  transform-origin: top center;
 }
 
 @media only screen and (max-width: 31rem) {
