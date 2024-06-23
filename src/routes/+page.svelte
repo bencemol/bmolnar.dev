@@ -60,6 +60,7 @@
   }
 
   h2 {
+    position: absolute;
     font-size: 1.8rem;
     align-self: flex-end;
     padding: 1.5rem;
@@ -71,7 +72,7 @@
 
   .inspiration a {
     align-items: center;
-    font-size: max(0.7vh, 8px);
+    font-size: max(0.7vh, 0.5rem);
   }
 
   .contact {
@@ -84,13 +85,13 @@
     --scale: 0;
   }
 
-  @media screen and (max-height: 82rem) {
+  @media screen and (max-height: 85rem) {
     ul {
       height: 100%;
     }
 
     li {
-      height: 23rem;
+      height: 25rem;
     }
   }
 </style>

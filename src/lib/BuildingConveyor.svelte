@@ -15,11 +15,11 @@
 <style>
   .container {
     margin-top: auto;
-    transform: translateY(33%);
+    transform: scale(75%);
   }
 
   .track {
-    --duration: 10s;
+    --duration: 15s;
     animation: slide var(--duration) linear reverse infinite;
   }
 
@@ -51,16 +51,6 @@
     }
     100% {
       transform: translate(-66%, -33%);
-    }
-  }
-
-  @media only screen and (max-width: 80rem) {
-    .container {
-      transform: scale(75%);
-    }
-
-    .track {
-      --duration: 15s;
     }
   }
 </style>
