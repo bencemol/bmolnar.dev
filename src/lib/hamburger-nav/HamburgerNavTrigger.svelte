@@ -12,9 +12,9 @@
     stroke-linecap="round"
     class:open={isOpen}
   >
-    <path class="line-1" d="M4 6, L20 6" />
-    <path class="line-2" d="M4 12, L20 12" />
-    <path class="line-3" d="M4 18, L20, 18" />
+    <path class="line-1" d="M4 6 L20 6" />
+    <path class="line-2" d="M4 12 L20 12" />
+    <path class="line-3" d="M4 18 L20, 18" />
   </svg>
 </button>
 
@@ -37,14 +37,14 @@
   }
 
   .open .line-1 {
-    d: path('M6 6, L18 18');
+    d: path('M6 6 L18 18');
   }
 
   .open .line-2 {
-    d: path('M12 12, L12 12');
+    d: path('M12 12 L12 12');
   }
 
   .open .line-3 {
-    d: path('M6 18, L18 6');
+    d: path('M6 18 L18 6');
   }
 </style>

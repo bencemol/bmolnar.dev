@@ -60,7 +60,6 @@
   }
 
   h2 {
-    position: absolute;
     font-size: 1.8rem;
     align-self: flex-end;
     padding: 1.5rem;

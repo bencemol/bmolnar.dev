@@ -25,9 +25,11 @@
       <HamburgerNavTrigger isOpen={navOpen} on:click={toggle} />
     </section>
   </section>
-  <nav use:accordion={navOpen}>
-    <HamburgerNav on:click={close} on:clickOutside={close} />
-  </nav>
+  {#if navOpen}
+    <nav transition:accordion>
+      <HamburgerNav on:click={close} on:clickOutside={close} />
+    </nav>
+  {/if}
   {#if navOpen}
     <style>
       html {
@@ -72,7 +74,7 @@
 
   .faded {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-35%);
     pointer-events: none;
   }
 

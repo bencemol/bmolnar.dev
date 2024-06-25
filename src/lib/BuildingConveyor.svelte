@@ -24,13 +24,10 @@
   }
 
   .slip-track {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 66%);
     animation: slide calc(var(--duration) * 0.8) linear reverse infinite;
     animation-play-state: var(--slip-play-state, paused);
-  }
-
-  img {
-    width: 66%;
   }
 
   img:nth-child(1) {
@@ -51,6 +48,12 @@
     }
     100% {
       transform: translate(-66%, -33%);
+    }
+  }
+
+  @media screen and (max-width: 31rem) {
+    .container {
+      transform: none;
     }
   }
 </style>

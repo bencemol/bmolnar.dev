@@ -1,30 +1,16 @@
-export function accordion(node: HTMLElement, isOpen: boolean) {
+import { cubicInOut } from 'svelte/easing';
+
+export function accordion(
+  node: HTMLElement,
+  params?: { delay?: number; duration?: number; easing?: (t: number) => number }
+) {
   const initialHeight = node.offsetHeight;
-  node.style.height = isOpen ? 'auto' : '0px';
   node.style.overflow = 'hidden';
+
   return {
-    update(isOpen: boolean) {
-      const animation = node.animate(
-        [
-          {
-            height: initialHeight + 'px',
-            opacity: 1,
-            overflow: 'hidden'
-          },
-          {
-            height: 0,
-            opacity: 0,
-            overflow: 'hidden'
-          }
-        ],
-        { duration: 230, easing: 'cubic-bezier(0.65,0.05,0.36,1)', fill: 'both' }
-      );
-      animation.pause();
-      if (!isOpen) {
-        animation.play();
-      } else {
-        animation.reverse();
-      }
-    }
+    delay: params?.delay || 0,
+    duration: params?.duration || 230,
+    easing: params?.easing || cubicInOut,
+    css: (t: number) => `height: ${t * initialHeight}px`
   };
 }
