@@ -17,12 +17,12 @@
 
 <header use:clickOutside on:clickOutside={close}>
   <section class="row">
-    <section class="title">
+    <section class="title" class:faded={navOpen}>
       <h1>Bence Molnár</h1>
       <h2 class="job-title">web developer</h2>
     </section>
     <section class="nav-trigger">
-      <HamburgerNavTrigger on:click={toggle} />
+      <HamburgerNavTrigger isOpen={navOpen} on:click={toggle} />
     </section>
   </section>
   <nav use:accordion={navOpen}>
@@ -61,10 +61,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition:
+      opacity 230ms var(--easing),
+      transform 230ms var(--easing);
   }
 
   .title h1 {
     font-size: 1.48rem;
+  }
+
+  .faded {
+    opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
   }
 
   .job-title {

@@ -48,9 +48,9 @@ h6 {
 
 main {
   transition:
-    filter 300ms var(--easing),
-    opacity 300ms var(--easing),
-    transform 300ms var(--easing);
+    filter 200ms var(--easing),
+    opacity 200ms var(--easing),
+    transform 200ms var(--easing);
   transform-origin: top center;
 }
 

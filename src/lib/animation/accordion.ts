@@ -17,7 +17,7 @@ export function accordion(node: HTMLElement, isOpen: boolean) {
             overflow: 'hidden'
           }
         ],
-        { duration: 300, easing: 'cubic-bezier(0.65,0.05,0.36,1)', fill: 'both' }
+        { duration: 230, easing: 'cubic-bezier(0.65,0.05,0.36,1)', fill: 'both' }
       );
       animation.pause();
       if (!isOpen) {

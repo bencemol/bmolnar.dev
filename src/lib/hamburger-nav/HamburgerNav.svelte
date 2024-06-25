@@ -20,7 +20,7 @@
     justify-content: center;
     font-size: 2rem;
     gap: var(--border-width);
-    padding: var(--border-width) 0;
+    padding: calc(var(--border-width) * 2) 0;
     text-transform: lowercase;
     text-align: center;
   }
